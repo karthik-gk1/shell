@@ -17,7 +17,7 @@ Y="\e[33m"
 W="\e[0m"
 LOG_FOLDER="/var/log/shell-log"
 LOG_FILE=$(echo $0 | cut -d "." -f1 )
-TIMESTAMP=$(date +%Y-%m-%d-H%-%M-%S)
+TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 LOG_PATH="$LOG_FOLDER/$LOG_FILE-$TIMESTAMP.log"
 
 echo "Script executing at: $TIMESTAMP" &>>$LOG_PATH
