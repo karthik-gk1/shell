@@ -8,12 +8,28 @@ then
     exit 1 # other than zero manual exit status
 fi
 
-dnf install mysql -y
+dnf list installed mysql
 
 if [ $? -ne 0 ]
-then 
-    echo "Installing Mysql... Failure"
-    exit 1
+then
+    dnf install mysql -y
+    if  [ $? -ne 0 ]
+    then 
+        echo "Installing... Falied"
+        exit 1
+    else 
+        echo "Installin... Success"
+    fi
 else 
-    echo "Installing Mysql... Success"
-fi
+    echo "Mysql already installed"
+
+
+# dnf install mysql -y
+
+# if [ $? -ne 0 ]
+# then 
+#     echo "Installing Mysql... Failure"
+#     exit 1
+# else 
+#     echo "Installing Mysql... Success"
+# fi
