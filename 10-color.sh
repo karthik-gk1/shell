@@ -30,4 +30,4 @@ then
     VALIDATE $? Mysql
 else 
     echo -e "Mysql installed... $Y already $W"
-fi 
+fi
