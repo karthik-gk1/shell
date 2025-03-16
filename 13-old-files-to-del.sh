@@ -27,4 +27,6 @@ done <<< $FILES_TO_DELETE
 
 
 # crontab -e --> schedule the scripts as per your timeline
-# *	 *	*	*	*
+# *	 *	*	*	* 13-old-files-to-del 
+# sudo cp 13-old-files-to-del.sh   /usr/local/bin/13-old-files-to-del
+# sudo +x /usr/local/bin/13-old-files-to-del
